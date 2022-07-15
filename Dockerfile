@@ -6,6 +6,5 @@ COPY . .
 RUN npm run build
 
 # /app/build will have all the stuff we care about for production
-
 FROM nginx
 COPY --from=builder /app/build /usr/share/nginx/html
